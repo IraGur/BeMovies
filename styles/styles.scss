@@ -1,0 +1,117 @@
+@import "common";
+@import "header-footer";
+@import "reset";
+@import "swiper";
+@import "modal";
+@import "registration";
+
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&family=Inter:wght@400;500;700&display=swap");
+
+// MAIN
+//---------SEARCH-----------------
+
+.content-wrapper {
+   min-height: calc(100vh - 200px);
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+   max-width: $content-width;
+   color: $color-primary;
+
+   .section {
+      // border: 1px solid red;
+      margin-top: 20px;
+   }
+
+   .search-bar {
+      display: flex;
+      justify-content: center;
+      input,
+      button {
+         box-shadow: 0 0 6px rgba(105, 126, 155, 0.2);
+         border: none;
+      }
+
+      input {
+         width: 272px;
+         height: 44px;
+         outline-style: none;
+         border-top-left-radius: 7px;
+         border-bottom-left-radius: 7px;
+         padding: 10px 20px;
+         font-size: 18px;
+         &:focus::placeholder {
+            color: rgba(52, 63, 77, 0.5);
+         }
+         [type="text"]:focus {
+            @include small-font;
+            color: black;
+         }
+      }
+
+      button {
+         width: 44px;
+         height: 44px;
+         background-color: $color-accent;
+         color: $color-primary;
+         text-align: center;
+         cursor: pointer;
+         border-top-right-radius: 7px;
+         border-bottom-right-radius: 7px;
+         font-size: 28px;
+         padding: 8px 10px;
+
+         &:hover {
+            background-color: $color-accent;
+            color: #a5b1c3;
+         }
+      }
+   }
+   .search-result h2 {
+      margin-top: 102px;
+   }
+
+   //---------------LATEST SECTION-------------
+
+   #latest {
+      margin-bottom: 95px;
+      h2 {
+         margin-top: 124px;
+      }
+   }
+
+   //---------------MOVIES BY GENRE SECTION-------
+
+   .movies-by-genre {
+      margin-bottom: 110px;
+      .genres-heading {
+         text-align: center;
+         h2 {
+            margin-left: 0;
+            margin-bottom: 46px;
+         }
+         .genres-menu ul {
+            display: inline-flex;
+            align-items: center;
+            gap: 33px;
+            border-bottom: 1px solid white;
+            padding-bottom: 26px;
+            .red {
+               background-color: $color-accent;
+               padding: 7px 10px;
+               border-radius: 8px;
+            }
+            li {
+               padding-bottom: 3px;
+               :hover {
+                  cursor: pointer;
+                  &:after {
+                     width: 100%;
+                     left: 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
