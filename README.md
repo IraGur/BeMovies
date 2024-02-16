@@ -1,4 +1,4 @@
-**Collaborative Work**
+### **Collaborative Work**
 
 - **JS by:** Irina Guranova
 - **HTML, CSS by:** Elodi Duval
